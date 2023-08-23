@@ -95,13 +95,13 @@ if (selected=='Diabetes Prediciton'):
 
 ! pip install streamlit_option_menu
 
-import pickle
-import streamlit as st
-from streamlit_option_menu import option_menu
+# import pickle
+# import streamlit as st
+# from streamlit_option_menu import option_menu
 
-import pickle
-import streamlit as st
-from streamlit_option_menu import option_menu
+# import pickle
+# import streamlit as st
+# from streamlit_option_menu import option_menu
 
 # loading the saved models
 
@@ -112,55 +112,53 @@ diabetes_model = pickle.load(open('diabetes_model.sav','rb'))
 
 # sidebar for navigate
 
-with st.sidebar:
-    selected = option_menu('Multiple Disease Prediction System using ML',
-    ['Diabetes Prediction'],
-    # 'Heart Disease Prediciton',
-    # 'Parkinsons Disease Prediction',
-    # 'Kidney Disease Prediciton'],
-                        icons=['activity'],
-                        # ,'heart','person','clipboard2-pulse'],
-                        default_index=0)
+# with st.sidebar:
+#     selected = option_menu('Multiple Disease Prediction System using ML',
+#     ['Diabetes Prediction'],
+#     # 'Heart Disease Prediciton',
+#     # 'Parkinsons Disease Prediction',
+#     # 'Kidney Disease Prediciton'],
+#                         icons=['activity'],
+#                         # ,'heart','person','clipboard2-pulse'],
+#                         default_index=0)
 
-# Diabetes Prediction
-if (selected=='Diabetes Prediciton'):
-    st.title('Diabetes Prediction using ML')
+# # Diabetes Prediction
+# if (selected=='Diabetes Prediciton'):
+#     st.title('Diabetes Prediction using ML')
 
-    # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
+#     # getting the input data from the user
+#     col1, col2, col3 = st.columns(3)
 
-    with col1:
-      Pregnancies = st.text_input('Number of Pregnancies')
-    with col2:
-      Glucose = st.text_input('Glucose level')
-    with col3:
-      BloodPressure = st.text_input('Blood Pressure value')
-    with col1:
-      SkinThickness = st.text_input('Skin Thickness value')
-    with col2:
-      Insulin = st.text_input('Insulin level')
-    with col3:
-      BMI = st.text_input('BMI value')
-    with col1:
-      DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
-    with col2:
-      Age = st.text_input('Age of the Person')
+#     with col1:
+#       Pregnancies = st.text_input('Number of Pregnancies')
+#     with col2:
+#       Glucose = st.text_input('Glucose level')
+#     with col3:
+#       BloodPressure = st.text_input('Blood Pressure value')
+#     with col1:
+#       SkinThickness = st.text_input('Skin Thickness value')
+#     with col2:
+#       Insulin = st.text_input('Insulin level')
+#     with col3:
+#       BMI = st.text_input('BMI value')
+#     with col1:
+#       DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
+#     with col2:
+#       Age = st.text_input('Age of the Person')
 
-    # code for Prediction
-    diab_dignosis = ''
+#     # code for Prediction
+#     diab_dignosis = ''
 
-    # creating a button for prediction
-    if st.button('Diabetes Test Result'):
-      diab_prediciton = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure,
-                                                 SkinThickness, Insulin, BMI,
-                                                 DiabetesPedigreeFunction, Age]])
-      if (diab_prediction[0]==1):
-        diab_diagnosis = 'The person is Diabetic'
-      else:
-        diab_diagnosis = 'The person is not Diabetic'
-    st.success(diab_diagnosis)
-
-
+#     # creating a button for prediction
+#     if st.button('Diabetes Test Result'):
+#       diab_prediciton = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure,
+#                                                  SkinThickness, Insulin, BMI,
+#                                                  DiabetesPedigreeFunction, Age]])
+#       if (diab_prediction[0]==1):
+#         diab_diagnosis = 'The person is Diabetic'
+#       else:
+#         diab_diagnosis = 'The person is not Diabetic'
+#     st.success(diab_diagnosis)
 
 
 
@@ -171,15 +169,17 @@ if (selected=='Diabetes Prediciton'):
 
 
 
-# # Heart Disease
-# if (selected=='Heart Disease Prediction'):
-#     st.title('Heart Disease Prediciton using ML')
 
-# # Parkinsons Disease
-# if (selected=='Parkinsons Disease Prediction'):
-#     st.title('Parkinsons Disease Prediciton using ML')
 
-# # Kidney Disease
-# if (selected=='Kidney Disease Prediction'):
-#     st.title('Kidney Disease Prediciton using ML')
+# # # Heart Disease
+# # if (selected=='Heart Disease Prediction'):
+# #     st.title('Heart Disease Prediciton using ML')
+
+# # # Parkinsons Disease
+# # if (selected=='Parkinsons Disease Prediction'):
+# #     st.title('Parkinsons Disease Prediciton using ML')
+
+# # # Kidney Disease
+# # if (selected=='Kidney Disease Prediction'):
+# #     st.title('Kidney Disease Prediciton using ML')
 
