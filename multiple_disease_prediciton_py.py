@@ -55,7 +55,7 @@ if (selected=='Diabetes Prediciton'):
       Age = st.text_input('Age of the Person')
 
     # code for Prediction
-    diab_dignosis = ''
+    diab_diagnosis = ''
 
     # creating a button for prediction
     if st.button('Diabetes Test Result'):
