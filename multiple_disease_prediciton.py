@@ -26,7 +26,7 @@ with st.sidebar:
     'Heart Disease Prediciton',
     'Parkinsons Disease Prediction',
     'Kidney Disease Prediciton'],
-                        icons=['activity',
+                        icons=['activity'
                         ,'heart','person','clipboard2-pulse'],
                         default_index=0)
 
