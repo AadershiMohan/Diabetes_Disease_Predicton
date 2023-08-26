@@ -1,1 +1,1 @@
-# Multi_Disease_Predicton
+# Diabetes Disease Prediction
