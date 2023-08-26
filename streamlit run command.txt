@@ -1,1 +1,0 @@
-streamlit run "C:\Users\AADERSHI MOHAN\Desktop\DkstopFile\Aadershi\DATA  SCIENCE\Project\Projects\WebApp_Multi_Disease_Prediction_System"
